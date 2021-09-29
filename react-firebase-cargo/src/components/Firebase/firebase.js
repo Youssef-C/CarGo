@@ -1,6 +1,7 @@
-import app from 'firebase/app';
+import app from 'firebase/compat/app';
+import 'firebase/compat/auth';
 
-const firebaseConfig = {
+const config = {
     apiKey: "AIzaSyCLA8GFflDaXpos41WHWxlvHfR7Q32F6bo",
     authDomain: "cargo-63109.firebaseapp.com",
     projectId: "cargo-63109",
@@ -13,9 +14,24 @@ const firebaseConfig = {
 class Firebase {
     constructor() {
         app.initializeApp(config);
+
+        this.auth = app.auth();
     }
+
+    //*** Auth API *** 
+
+    doCreateUserWithEmailAndPassword = (email, password) => 
+        this.auth.createUserWithEmailAndPassword(email, password);
+
+    doSignInWithEmailAndPassword = (email, password) => 
+        this.auth.signInWithEmailAndPassword(email, password);
+
+    doSignOut = () => this.auth.signOut();
+
+    doPasswordReset = email => this.auth.sendPasswordResetEmail(email);
+
+    doPasswordUpdate = password =>
+        this.auth.currentUser.updatePassword(password);
 }
 
 export default Firebase;
-
-//Page 29
