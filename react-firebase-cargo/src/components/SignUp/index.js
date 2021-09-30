@@ -40,10 +40,6 @@ class SignUpFormBase extends Component {
             });
         
         event.preventDefault();
-    }
-
-    onChange = event => {
-
     };
 
     onChange = event => {
@@ -62,7 +58,7 @@ class SignUpFormBase extends Component {
         const isInvalid = 
             passwordOne !== passwordTwo  ||
             passwordOne === ''  ||
-            email !== ''  ||
+            email === ''  ||
             username === ''; 
     
         return (
