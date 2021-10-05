@@ -20,7 +20,6 @@ const NavigatonAuth = () => (
         
         <ul>
 
-
             <li>
                 <Link to={ROUTES.LANDING}>Landing</Link>
             </li>
