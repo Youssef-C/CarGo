@@ -30,19 +30,15 @@ const NavigatonAuth = () => (
             </li>
 
             <li>
+                <Link to={ROUTES.MESSENGER}>Messages</Link>
+            </li>
+
+            <li>
                 <Link to={ROUTES.ACCOUNT}>Account</Link>
             </li>
-            
+
             <li>
                 <SignOutButton />
-            </li>
-
-            <li>
-                <Link to={ROUTES.SIGN_IN}>Sign In</Link>
-            </li>
-
-            <li>
-                <Link to={ROUTES.MESSENGER}>Messages</Link>
             </li>
 
         </ul>
