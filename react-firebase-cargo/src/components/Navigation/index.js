@@ -9,7 +9,7 @@ const Navigaton = () => (
     <div>
         <AuthUserContext.Consumer>
             {authUser =>
-                authUser ? <NavigatonAuth /> : <NavigatonAuth /> 
+                authUser ? <NavigatonAuth /> : <NavigatoNonAuth /> 
             }
         </AuthUserContext.Consumer>
     </div>
@@ -38,7 +38,24 @@ const NavigatonAuth = () => (
             </li>
 
             <li>
-                <Link to={ROUTES.ADMIN}>Admin</Link>
+                <Link to={ROUTES.SIGN_IN}>Sign In</Link>
+            </li>
+
+            <li>
+                <Link to={ROUTES.MESSENGER}>Messages</Link>
+            </li>
+
+        </ul>
+    </div>
+);
+
+const NavigatoNonAuth = () => (
+    <div>
+        
+        <ul>
+
+            <li>
+                <Link to={ROUTES.LANDING}>Landing</Link>
             </li>
 
             <li>
@@ -47,6 +64,6 @@ const NavigatonAuth = () => (
 
         </ul>
     </div>
-);
+)
 
 export default Navigaton; 
