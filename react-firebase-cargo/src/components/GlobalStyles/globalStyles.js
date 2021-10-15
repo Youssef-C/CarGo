@@ -7,6 +7,8 @@ const GlobalStyle = createGlobalStyle`
     }
 
     button {
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
         color: white;
         background-color: rgba(67, 69, 108, 1);
         border-radius: 32px;
@@ -15,6 +17,12 @@ const GlobalStyle = createGlobalStyle`
         height: 50px;
         left: 64px;
         top: 459px;
+        transition: ease-ease-in-out, 1ms;
+    }
+
+    button:hover {
+        background-color: rgba(104, 107, 161, 1);
+        transition: ease-ease-in-out, 1ms;
     }
 
     link {
