@@ -1,5 +1,6 @@
 import React from 'react'; 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import GlobalStyle from '../GlobalStyles/globalStyles';
 
 import Navigation from '../Navigation';
 import LandingPage from '../Landing';
@@ -18,7 +19,9 @@ import { withAuthenication } from '../Session';
 const App = () => (
 
           <Router>
+            
             <div>
+              <GlobalStyle />
               <Navigation />
         
               <hr />
