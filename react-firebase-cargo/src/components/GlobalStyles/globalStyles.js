@@ -17,6 +17,12 @@ const GlobalStyle = createGlobalStyle`
         top: 459px;
     }
 
+    link {
+        //Gonna have to style the navbar separetly
+        color: red;
+        font-size: 32px;
+    }
+    
     input {
         font-family: 'Roboto', sans-serif;
         font-size: 18px;
