@@ -1,65 +1,129 @@
 import React from 'react'; 
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { AuthUserContext } from '../Session';
 
 import SignOutButton from '../SignOut';
 import * as ROUTES from '../../constants/routes';
 
-const Navigaton = () => (
-    <div>
-        <AuthUserContext.Consumer>
-            {authUser =>
-                authUser ? <NavigatonAuth /> : <NavigatoNonAuth /> 
-            }
-        </AuthUserContext.Consumer>
-    </div>
+const Navigation = () => (
+    <Wrapper>
+        <div>
+            <AuthUserContext.Consumer>
+                {authUser =>
+                    authUser ? <NavigationAuth /> : <NavigationNonAuth /> 
+                }
+            </AuthUserContext.Consumer>
+        </div>
+    </Wrapper>
 );
 
-const NavigatonAuth = () => (
-    <div>
-        
-        <ul>
 
 
-            <li>
-                <Link to={ROUTES.LANDING}>Landing</Link>
-            </li>
+const NavigationAuth = () => (
 
-            <li>
-                <Link to={ROUTES.HOME}>Home</Link>
-            </li>
+        <Styles.Wrapper>
+            <NavBar.Wrapper>
+                <NavBar.Items>
 
-            <li>
-                <Link to={ROUTES.MESSENGER}>Messages</Link>
-            </li>
+                    <NavBar.Item>
+                        <StyledLink to={ROUTES.LANDING}>Landing</StyledLink>
+                    </NavBar.Item>
 
-            <li>
-                <Link to={ROUTES.ACCOUNT}>Account</Link>
-            </li>
+                    <NavBar.Item>
+                        <StyledLink to={ROUTES.HOME}>Home</StyledLink>
+                    </NavBar.Item>
 
-            <li>
-                <SignOutButton />
-            </li>
+                    <NavBar.Item>
+                        <StyledLink to={ROUTES.MESSENGER}>Messages</StyledLink>
+                    </NavBar.Item>
 
-        </ul>
-    </div>
+                    <NavBar.Item>
+                        <StyledLink to={ROUTES.ACCOUNT}>Account</StyledLink>
+                    </NavBar.Item>
+
+                    <NavBar.Item>
+                        <SignOutButton />
+                    </NavBar.Item>
+                
+                </NavBar.Items>
+            </NavBar.Wrapper>
+        </Styles.Wrapper>
 );
 
-const NavigatoNonAuth = () => (
-    <div>
+
+const NavigationNonAuth = () => (
+    <Styles.Wrapper>
+        <NavBar.Wrapper>
+            <NavBar.Items>
         
-        <ul>
+                <NavBar.Item>
+                    <StyledLink to={ROUTES.SIGN_UP}>Sign Up</StyledLink>
+                </NavBar.Item>   
 
-            <li>
-                <Link to={ROUTES.LANDING}>Landing</Link>
-            </li>
+                <NavBar.Item>
+                    <StyledLink to={ROUTES.SIGN_IN}>Sign In</StyledLink>
+                </NavBar.Item>    
+       
+            </NavBar.Items>
+        </NavBar.Wrapper>
+    </Styles.Wrapper>
+);
 
-            <li>
-                <Link to={ROUTES.SIGN_IN}>Sign In</Link>
-            </li>
+export default Navigation; 
 
-        </ul>
-    </div>
-)
 
-export default Navigaton; 
+const Wrapper = styled.section`
+    display: flex;
+    justify-content: flex-start;
+    padding: 12px;
+    background-color: red;
+    @media (max-width: 640px) {
+        background-color: blue;
+    }
+`;
+
+const Styles = {
+    Wrapper: styled.main`
+    `,
+  };
+
+const NavBar = {
+    Wrapper: styled.nav`
+    flex: 1;
+
+    align-self: flex-start;
+
+    padding: 1rem 3rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`,
+
+    Items: styled.ul`
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+
+    @media (max-width: 640px) {
+        justify-content: center;
+        flex-direction: column;
+        max-width: 75%;
+    }
+`,
+
+    Item: styled.li`
+    font-size: 18px;
+    padding: 6px;
+    cursor: pointer;
+    margin: 2px;
+    text-align: center;
+`,
+};
+
+const StyledLink = styled(Link)`
+    text-decoration: none;
+    color: white;
+`
+    

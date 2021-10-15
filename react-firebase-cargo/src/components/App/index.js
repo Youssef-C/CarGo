@@ -24,8 +24,6 @@ const App = () => (
               <GlobalStyle />
               <Navigation />
         
-              <hr />
-        
               <Route exact path={ROUTES.LANDING} component={LandingPage} />
               <Route exact path={ROUTES.SIGN_UP} component={SignUpPage} />
               <Route exact path={ROUTES.SIGN_IN} component={SignInPage} />
