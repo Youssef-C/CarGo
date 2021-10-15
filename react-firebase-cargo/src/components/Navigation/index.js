@@ -53,21 +53,9 @@ const NavigationAuth = () => (
 
 
 const NavigationNonAuth = () => (
-    <Styles.Wrapper>
-        <NavBar.Wrapper>
-            <NavBar.Items>
+    <StyledWrapper>
         
-                <NavBar.Item>
-                    <StyledLink to={ROUTES.SIGN_UP}>Sign Up</StyledLink>
-                </NavBar.Item>   
-
-                <NavBar.Item>
-                    <StyledLink to={ROUTES.SIGN_IN}>Sign In</StyledLink>
-                </NavBar.Item>    
-       
-            </NavBar.Items>
-        </NavBar.Wrapper>
-    </Styles.Wrapper>
+    </StyledWrapper>
 );
 
 export default Navigation; 
@@ -77,7 +65,6 @@ const Wrapper = styled.section`
     display: flex;
     justify-content: flex-start;
     padding: 12px;
-    background-color: red;
     @media (max-width: 640px) {
         background-color: blue;
     }
@@ -124,6 +111,10 @@ const NavBar = {
 
 const StyledLink = styled(Link)`
     text-decoration: none;
-    color: white;
+`
+
+const StyledWrapper = styled.div`
+    display: none;
+    height: 0px;
 `
     
