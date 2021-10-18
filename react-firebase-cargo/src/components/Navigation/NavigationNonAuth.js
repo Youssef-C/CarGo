@@ -1,32 +1,22 @@
-import React from 'react'; 
+import React from "react";
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { AuthUserContext } from '../Session';
 
-import NavigationAuth from './NavigationAuth';
-import NavigationNonAuth from './NavigationNonAuth';
-
-const Navigation = () => (
-    <Wrapper>
-        <div>
-            <AuthUserContext.Consumer>
-                {authUser =>
-                    authUser ? <NavigationAuth /> : <NavigationNonAuth /> 
-                }
-            </AuthUserContext.Consumer>
-        </div>
-    </Wrapper>
+const NavigationNonAuth = () => (
+    <StyledWrapper>
+        
+    </StyledWrapper>
 );
 
-export default Navigation; 
-
+export default NavigationNonAuth;
 
 const Wrapper = styled.section`
     display: flex;
     justify-content: flex-start;
     padding: 12px;
+    max-height: 0px;
     @media (max-width: 640px) {
-        max-height: 0px;
+        
     }
 `;
 
@@ -77,4 +67,3 @@ const StyledWrapper = styled.div`
     display: none;
     height: 0px;
 `
-    
