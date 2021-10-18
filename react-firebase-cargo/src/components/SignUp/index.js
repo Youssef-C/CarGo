@@ -8,8 +8,16 @@ import * as ROUTES from '../../constants/routes';
 const SignUpPage = () => (
     <SignUpWrapper.Wrapper>
         <SignUpWrapper.Items>
+
             <SignUpWrapper.Title>Sign Up</SignUpWrapper.Title>
             <SignUpForm />
+
+            <SecondaryButton>
+                <button>
+                    <StyledLink to={ROUTES.SIGN_IN}>Sign In</StyledLink>
+                </button>
+            </SecondaryButton>
+
         </SignUpWrapper.Items>
     </SignUpWrapper.Wrapper>
 );
@@ -174,3 +182,12 @@ const SignUpWrapper = {
     `,
   };
     
+  const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+`
+
+const SecondaryButton = styled.div`
+    margin: 90px;    
+`;
