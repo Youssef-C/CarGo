@@ -127,6 +127,7 @@ const SignInStyle = {
   const SignInFormStyle = styled.div`
     display: flex;
     flex-direction: column;
+    margin: 0px 0px 120px 0px;
 `;
 
 const Input = styled.input`

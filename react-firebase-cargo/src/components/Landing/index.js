@@ -27,6 +27,7 @@ const Landing = {
     Wrapper: styled.section`
     display: flex;
     justify-content: center;
+    margin: 250px 0px 0px 0px;
     `,
     
     Items: styled.div`
