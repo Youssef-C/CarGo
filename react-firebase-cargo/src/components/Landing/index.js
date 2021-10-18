@@ -17,6 +17,11 @@ const LandingPage = () => (
         <button>
             <StyledLink to={ROUTES.SIGN_IN}>Sign In</StyledLink>
         </button>
+
+        <Landing.Subtitle>
+            <p>Text to describe the service</p>
+        </Landing.Subtitle>
+        
         </Landing.Items>
     </Landing.Wrapper>
 );
@@ -27,17 +32,26 @@ const Landing = {
     Wrapper: styled.section`
     display: flex;
     justify-content: center;
-    margin: 250px 0px 0px 0px;
+    margin: 230px 0px 0px 0px;
     `,
     
     Items: styled.div`
     display: flex;
     flex-direction: column;
+    max-width: 255px;
     `,
 
     Title: styled.title`
         display: flex;
         align-self: center;
+        margin: 20px;
+    `,
+
+    Subtitle: styled.p`
+    display: flex;
+    align-self: center;
+    margin: 20px;
+    font-size: 18px;
     `,
   };
 
