@@ -1,19 +1,28 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import { compose } from 'recompose'; 
+import styled from 'styled-components';
 
-import { SignUpLink } from '../SignUp';
+//import { SignUpLink } from '../SignUp';
 import { PasswordForgetLink } from '../PasswordForget';
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
 
 const SignInPage = () => (
-    <div>
-        <h1>Sign In</h1>
-        <SignInForm />
-        <PasswordForgetLink />
-        <SignUpLink />
-    </div>
+    <SignInStyle.Wrapper>
+        <SignInStyle.Items>
+                <SignInStyle.Title>
+                    <h1>Sign In</h1>
+                </SignInStyle.Title>
+            <SignInForm />
+            <ButtonWrapper>
+                <PasswordForgetLink />
+                <button>
+                <StyledLink to={ROUTES.SIGN_UP}>Sign Up</StyledLink>
+                </button>
+            </ButtonWrapper>  
+        </SignInStyle.Items>
+    </SignInStyle.Wrapper>
 );
 
 const INITIAL_STATE = {
@@ -55,30 +64,33 @@ class SignInFormBase extends Component {
         const isInvalid = password === '' || email === '';
 
         return (
-            <form onSubmit={this.onSubmit}>
-                
-                <input
-                name="email"
-                value={email}
-                onChange={this.onChange}
-                type="text"
-                placeholder="Email Address"
-                />
+            <SignInFormStyle>
+                <form onSubmit={this.onSubmit}>
+                    
+                    <Input
+                    name="email"
+                    value={email}
+                    onChange={this.onChange}
+                    type="text"
+                    placeholder="Email Address"
+                    />
 
-                <input
-                name="password"
-                value={password}
-                onChange={this.onChange}
-                type="password"
-                placeholder="Password"
-                />
+                    <Input
+                    name="password"
+                    value={password}
+                    onChange={this.onChange}
+                    type="password"
+                    placeholder="Password"
+                    />
+                    <ButtonWrapper>
+                        <Button disabled={isInvalid} type="submit">
+                            Sign In
+                        </Button>
+                    </ButtonWrapper>
 
-                <button disabled={isInvalid} type="submit">
-                    Sign In
-                </button>
-
-                {error && <p>{error.message}</p>}
-            </form>
+                    {error && <p>{error.message}</p>}
+                </form>
+            </SignInFormStyle>
         );
     }
 }
@@ -91,3 +103,49 @@ const SignInForm = compose(
 export default SignInPage;
 
 export { SignInForm };
+
+
+const SignInStyle = {
+    Wrapper: styled.div`
+    display: flex;
+    justify-content: center;
+    `,
+    
+    Items: styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    `,
+
+    Title: styled.title`
+        display: flex;
+        align-self: center;
+    `,
+  };
+
+
+  const SignInFormStyle = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+const Input = styled.input`
+    display: flex;
+`;
+
+
+const ButtonWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
+const Button = styled.button`
+    color: white;
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+`

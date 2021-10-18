@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 import  { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes'; 
@@ -68,11 +69,11 @@ class PasswordForgetFormBase extends Component {
 }
 
 const PasswordForgetLink = () => (
-    <p>
-        <Link to={ROUTES.PASSWORD_FORGET}>
+    <Button>
+        <StyledLink to={ROUTES.PASSWORD_FORGET}>
             Forgot Password?
-        </Link>
-    </p>
+        </StyledLink>
+    </Button>
 )
 
 export default PasswordForgetPage;
@@ -80,3 +81,12 @@ export default PasswordForgetPage;
 const PasswordForgetForm = withFirebase(PasswordForgetFormBase);
 
 export { PasswordForgetForm, PasswordForgetLink };
+
+const StyledLink = styled(Link)`
+    color: white;
+    text-decoration: none;
+`;
+
+const Button = styled.button`
+    color: white;
+`;
