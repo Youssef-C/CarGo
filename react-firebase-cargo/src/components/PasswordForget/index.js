@@ -8,7 +8,7 @@ import * as ROUTES from '../../constants/routes';
 const PasswordForgetPage = () => (
     <div>
         <h1>Password Forget</h1>
-        <PasswordForgetPage />
+        <PasswordForgetFormBase />
     </div>
 );
 
@@ -74,7 +74,7 @@ const PasswordForgetLink = () => (
             Forgot Password?
         </StyledLink>
     </Button>
-)
+);
 
 export default PasswordForgetPage;
 

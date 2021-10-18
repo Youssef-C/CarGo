@@ -15,10 +15,11 @@ const SignInPage = () => (
                     <h1>Sign In</h1>
                 </SignInStyle.Title>
             <SignInForm />
+            <PasswordForgetLink />
             <ButtonWrapper>
-                <PasswordForgetLink />
+                
                 <button>
-                <StyledLink to={ROUTES.SIGN_UP}>Sign Up</StyledLink>
+                    <StyledLink to={ROUTES.SIGN_UP}>Sign Up</StyledLink>
                 </button>
             </ButtonWrapper>  
         </SignInStyle.Items>
