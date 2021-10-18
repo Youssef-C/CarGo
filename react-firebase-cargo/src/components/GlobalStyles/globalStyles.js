@@ -9,7 +9,6 @@ const GlobalStyle = createGlobalStyle`
     button {
         font-family: 'Roboto', sans-serif;
         font-size: 18px;
-        color: white;
         background-color: rgba(67, 69, 108, 1);
         border-radius: 32px;
         border: none;
@@ -17,15 +16,14 @@ const GlobalStyle = createGlobalStyle`
         height: 50px;
         left: 64px;
         top: 459px;
-        transition: ease-ease-in-out, 1ms;
+        transition: ease-in-out, 1ms;
         margin: 8px;
 
         @media (max-width: 640px) {
-            width: 100px;
             height: 50px;
             left: 64px;
             top: 459px;
-            margin: 0px;
+            margin: 4px;
             font-size: 18px;
         }
     }
@@ -37,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
 
     link {
         //Gonna have to style the navbar separetly
-        color: red;
+        color: white;
         font-size: 32px;
     }
     
