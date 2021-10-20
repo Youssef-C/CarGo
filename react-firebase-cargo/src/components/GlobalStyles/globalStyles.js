@@ -51,6 +51,8 @@ const GlobalStyle = createGlobalStyle`
         left: 38px;
         top: 219px;
     }
-    `;
+`;
+
+
 
 export default GlobalStyle;

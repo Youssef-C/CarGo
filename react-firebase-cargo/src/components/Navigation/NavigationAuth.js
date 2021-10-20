@@ -1,6 +1,8 @@
 import React, {useEffect, useState } from "react";
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome, faUser, faComments} from '@fortawesome/free-solid-svg-icons'
 
 
 import SignOutButton from '../SignOut';
@@ -28,35 +30,32 @@ import * as ROUTES from '../../constants/routes';
 
     return(    
         <Styles.Wrapper>
-
+          <CSSReset />
             {isMobile ? (
-                <MobileNavBar.Wrapper>
+            <MobileNavBar.Wrapper>
+
                 <MobileNavBar.Items>
 
                     <MobileNavBar.Item>
-                        <StyledLink to={ROUTES.LANDING}>Landing</StyledLink>
+                        <Link to={ROUTES.HOME}><FontAwesomeIcon icon={faHome} color="white"/></Link>
                     </MobileNavBar.Item>
 
                     <MobileNavBar.Item>
-                        <StyledLink to={ROUTES.HOME}>Home</StyledLink>
+                        <StyledLink to={ROUTES.MESSENGER}><FontAwesomeIcon icon={faComments} color="white"/></StyledLink>
                     </MobileNavBar.Item>
 
                     <MobileNavBar.Item>
-                        <StyledLink to={ROUTES.MESSENGER}>Messages</StyledLink>
-                    </MobileNavBar.Item>
-
-                    <MobileNavBar.Item>
-                        <StyledLink to={ROUTES.ACCOUNT}>Account</StyledLink>
-                    </MobileNavBar.Item>
-
-                    <MobileNavBar.Item>
-                        <SignOutButton />
+                        <StyledLink to={ROUTES.ACCOUNT}><FontAwesomeIcon icon={faUser} color="white"/></StyledLink>
                     </MobileNavBar.Item>
                 
                 </MobileNavBar.Items>
+
             </MobileNavBar.Wrapper>
+
             ) : (
+
             <NavBar.Wrapper>
+
                 <NavBar.Items>
 
                     <NavBar.Item>
@@ -80,6 +79,7 @@ import * as ROUTES from '../../constants/routes';
                     </NavBar.Item>
                 
                 </NavBar.Items>
+
             </NavBar.Wrapper>
         )}
 
@@ -89,7 +89,8 @@ import * as ROUTES from '../../constants/routes';
 
 const Styles = {
     Wrapper: styled.main`
-      
+      display: flex;
+      justify-content: center;
     `
   };
   
@@ -120,33 +121,55 @@ const Styles = {
       cursor: pointer;
     `
   };
-  
+
+
+  //*** MOBILE navbar styling ***
   const MobileNavBar = {
-    Wrapper: styled(NavBar.Wrapper)`
-      position: fixed;
-      width: 100vw;
-      bottom: 0;
-  
+    Wrapper: styled.nav`
+      display: flex;
       justify-content: center;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      padding: 1rem 3rem;
+      background-color: #43456C;
     `,
-    Items: styled(NavBar.Items)`
+    Items: styled.ul`
+      display: flex;
+      list-style: none;
       flex: 1;
       padding: 0 2rem;
-  
-      justify-content: space-around;
+      justify-content: space-between;
     `,
-    Item: styled(NavBar.Item)`
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  
-      font-size: 1.2rem;
+    Item: styled.li`
+      font-size: 24px;
+      padding: 0 1rem;
+      cursor: pointer;
     `,
-    Icon: styled.span``
   };
 
   const StyledLink = styled(Link)`
   text-decoration: none;
 `
+
+const CSSReset = createGlobalStyle`
+  *,
+  *::before, 
+  *::after {
+    margin: 0; 
+    padding: 0;
+    box-sizing: inherit;
+  }
+
+  html {
+    font-size: 62.5%; /*1rem = 10px*/
+    box-sizing: border-box;    
+  }  
+
+  body {
+    font-size: 1.4rem;
+    font-family: sans-serif;
+  }
+`;
 
 export default NavigationAuth;
