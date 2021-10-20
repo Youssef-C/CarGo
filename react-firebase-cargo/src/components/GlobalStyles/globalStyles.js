@@ -18,14 +18,6 @@ const GlobalStyle = createGlobalStyle`
         top: 459px;
         transition: ease-in-out, 1ms;
         margin: 8px;
-
-        @media (max-width: 640px) {
-            height: 50px;
-            left: 64px;
-            top: 459px;
-            margin: 4px;
-            font-size: 18px;
-        }
     }
 
     button:hover {
