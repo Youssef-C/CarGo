@@ -20,28 +20,33 @@ const AccountPage = () => (
                         
                         <AccountStyle.User>
                             <img src={ProfilePic} alt="Profile" />
-                            
-                            
-
                             <AccountStyle.Info>
-                                <h3>Logged in as: {authUser.email}</h3>
+                            
+                                <h3>{authUser.email}</h3>
 
                                 <div className="rating">
-                                    <div>
+                                    <div className="ratingItem">
                                         <p>3.9 <FontAwesomeIcon icon={faStar} color="#CCA747"/> </p>
                                         <p> Renter </p>
                                     </div>
 
-                                    <div>
+                                    <div className="ratingItem">
                                         <p>4.8 <FontAwesomeIcon icon={faStar} color="#CCA747"/> </p>
                                         <p> Owner </p>
                                     </div>
 
                                 </div>
+
                             </AccountStyle.Info>
                             
                         </AccountStyle.User>
-                        
+
+                        <AccountStyle.AboutMe>
+                            <div className="aboutMe">
+                                            <h3>About</h3>
+                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error neque incidunt nulla soluta non dolorum minima aliquam </p>
+                            </div>
+                        </AccountStyle.AboutMe>
                         
                     <SignOutButton />
                     </div>
@@ -84,19 +89,34 @@ const AccountStyle = {
     align-items: center;
     `,
 
+    AboutMe: styled.div`
+        .aboutMe{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    `,
+
     Info: styled.div`
         display: flex;
         justify-content: space-between;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         margin: 6px;
 
         .rating {
             display: flex;
             flex-direction: row;
-            justify-content: space-evenly;
-            align-content: flex-start;
-            padding: 12px;
+            justify-content: space-between;
+            align-content: center;
+
+            .ratingItem {
+                display: flex;
+                flex-direction: column;
+                padding: 12px;
+            }
         }
+    
     `,
 
     Title: styled.title`
