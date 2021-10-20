@@ -128,7 +128,7 @@ const Styles = {
     Wrapper: styled.nav`
       display: flex;
       justify-content: center;
-      position: fixed;
+      position: absolute;
       width: 100%;
       bottom: 0;
       padding: 1rem 3rem;

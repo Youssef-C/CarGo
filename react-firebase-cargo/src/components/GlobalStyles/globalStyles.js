@@ -1,13 +1,17 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+
+    * {
+font-family: 'Comfortaa', cursive;
+    }
     body{
         background: white;
         padding: 20px;
     }
 
     button {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Comfortaa', cursive;
         font-size: 18px;
         background-color: rgba(67, 69, 108, 1);
         border-radius: 32px;
@@ -32,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
     }
     
     input {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Comfortaa', cursive;
         font-size: 18px;
         border: 2px solid rgba(67, 69, 108, 1);
         border-radius: 32px;

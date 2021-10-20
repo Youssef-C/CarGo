@@ -13,7 +13,6 @@ import { AuthUserContext, withAuthorization } from '../Session';
 const AccountPage = () => (
     <AccountStyle.Wrapper>
 
-        <AccountStyle.Items>
             <AuthUserContext.Consumer>
                 {authUser => (
                     <div>
@@ -24,18 +23,18 @@ const AccountPage = () => (
                             
                                 <h3>{authUser.email}</h3>
 
-                                <div className="rating">
-                                    <div className="ratingItem">
+                                <RatingWrapper.Wrapper>
+                                    <RatingWrapper.Item>
                                         <p>3.9 <FontAwesomeIcon icon={faStar} color="#CCA747"/> </p>
                                         <p> Renter </p>
-                                    </div>
+                                    </RatingWrapper.Item>
 
-                                    <div className="ratingItem">
+                                    <RatingWrapper.Item>
                                         <p>4.8 <FontAwesomeIcon icon={faStar} color="#CCA747"/> </p>
                                         <p> Owner </p>
-                                    </div>
+                                    </RatingWrapper.Item>
 
-                                </div>
+                                </RatingWrapper.Wrapper>
 
                             </AccountStyle.Info>
                             
@@ -43,7 +42,7 @@ const AccountPage = () => (
 
                         <AccountStyle.AboutMe>
                             <div className="aboutMe">
-                                            <h3>About</h3>
+                                            <h3 className="aboutTitle">About</h3>
                                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error neque incidunt nulla soluta non dolorum minima aliquam </p>
                             </div>
                         </AccountStyle.AboutMe>
@@ -52,7 +51,6 @@ const AccountPage = () => (
                     </div>
                 )}
             </AuthUserContext.Consumer>
-        </AccountStyle.Items>
 
     </AccountStyle.Wrapper>
 );
@@ -71,11 +69,13 @@ const AccountStyle = {
     User: styled.div`
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        align-self: center;
+        margin: 30px;
+        padding: 1rem;
 
         img {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             object-fit: cover;
             object-position: 100% 0;
             border-radius: 12px;
@@ -83,17 +83,19 @@ const AccountStyle = {
         }
     `,
 
-    Items: styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    `,
-
     AboutMe: styled.div`
-        .aboutMe{
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 20px;
+
+        .aboutTitle{
+            padding: 4px;
+            text-align: center;
+        }
+
+        .aboutMe{
+            max-width: 70%;
         }
     `,
 
@@ -104,19 +106,9 @@ const AccountStyle = {
         flex-wrap: wrap;
         margin: 6px;
 
-        .rating {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-content: center;
-
-            .ratingItem {
-                display: flex;
-                flex-direction: column;
-                padding: 12px;
-            }
+        h3{
+            padding: 2px;
         }
-    
     `,
 
     Title: styled.title`
@@ -124,3 +116,22 @@ const AccountStyle = {
         align-self: center;
     `,
   };
+
+const RatingWrapper = {
+     Wrapper: styled.div`  
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            padding: 2px;
+        `,
+
+    Item: styled.div`
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            margin: 10px;
+        `,
+};
+        
+
+         
