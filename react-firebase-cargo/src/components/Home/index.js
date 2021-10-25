@@ -18,8 +18,6 @@ const condition = authUser => !!authUser;
 
 export default withAuthorization(condition)(HomePage);
 
-// <Navigation />
-
 
 const HomeStyle = {
     Wrapper: styled.div`

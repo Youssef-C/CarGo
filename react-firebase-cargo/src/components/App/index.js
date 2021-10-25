@@ -14,6 +14,7 @@ import MessengerPage from '../Messenger';
 
 import * as ROUTES from '../../constants/routes';
 import { withAuthenication } from '../Session';
+import CarAddPage from '../CarAdd';
 
 
 const App = () => (
@@ -35,6 +36,7 @@ const App = () => (
               <Route exact path={ROUTES.ACCOUNT} component={AccountPage} />
               <Route exact path={ROUTES.ADMIN} component={AdminPage} />
               <Route exact path={ROUTES.MESSENGER} component={MessengerPage} />
+              <Route exact path={ROUTES.CARADD} component={CarAddPage} />
 
             </div>
           </Router>

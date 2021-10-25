@@ -2,7 +2,7 @@ import React, {useEffect, useState } from "react";
 import styled, { createGlobalStyle } from 'styled-components';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faUser, faComments} from '@fortawesome/free-solid-svg-icons'
+import { faHome, faUser, faPlus} from '@fortawesome/free-solid-svg-icons'
 
 
 import SignOutButton from '../SignOut';
@@ -41,7 +41,7 @@ import * as ROUTES from '../../constants/routes';
                     </MobileNavBar.Item>
 
                     <MobileNavBar.Item>
-                        <StyledLink to={ROUTES.MESSENGER}><FontAwesomeIcon icon={faComments} color="white"/></StyledLink>
+                        <StyledLink to={ROUTES.CARADD}><FontAwesomeIcon icon={faPlus} color="white"/></StyledLink>
                     </MobileNavBar.Item>
 
                     <MobileNavBar.Item>
@@ -75,6 +75,10 @@ import * as ROUTES from '../../constants/routes';
                     </NavBar.Item>
 
                     <NavBar.Item>
+                        <StyledLink to={ROUTES.CARADD}>Add Car</StyledLink>
+                    </NavBar.Item>
+
+                    <NavBar.Item>
                         <SignOutButton />
                     </NavBar.Item>
                 
@@ -86,6 +90,8 @@ import * as ROUTES from '../../constants/routes';
         </Styles.Wrapper>
     );
 }
+
+export default NavigationAuth;
 
 const Styles = {
     Wrapper: styled.main`
@@ -172,4 +178,3 @@ const CSSReset = createGlobalStyle`
   }
 `;
 
-export default NavigationAuth;
