@@ -1,8 +1,8 @@
 import React, {useEffect, useState } from "react";
 import styled, { createGlobalStyle } from 'styled-components';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faUser, faPlus} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faUser, faPlus} from '@fortawesome/free-solid-svg-icons';
 
 
 import SignOutButton from '../SignOut';

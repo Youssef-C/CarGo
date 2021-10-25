@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 // import Navigation from '../Navigation';
 
+import CarMap from '../CarMap/index';
 import { withAuthorization } from '../Session';
 
 const HomePage = () => (
@@ -9,6 +10,7 @@ const HomePage = () => (
         <HomeStyle.Items>
             <h1>Home</h1>
             <p>The Home Page is accessible by every signed in user.</p>
+            <CarMap />
         </HomeStyle.Items>
     </HomeStyle.Wrapper>
         
