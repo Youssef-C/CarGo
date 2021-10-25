@@ -49,21 +49,28 @@ class PasswordForgetFormBase extends Component {
         const isInvalid = email === '';
 
         return (
-            <form onSubmit={this.onSubmit}>
-                <input
-                    name ='email'
-                    value = {this.state.email}
-                    onChange = {this.onChange}
-                    type = 'text'
-                    placeholder = 'Email Address'
-                />
+                <form onSubmit={this.onSubmit}>
+                    <input
+                        name ='email'
+                        value = {this.state.email}
+                        onChange = {this.onChange}
+                        type = 'text'
+                        placeholder = 'Email Address'
+                    />
+                    <PrimaryButton>
+                        <Button disabled={isInvalid} type = 'submit'>
+                            Reset My Password
+                        </Button>
+                    </PrimaryButton>
 
-                <Button disabled={isInvalid} type = 'submit'>
-                    Reset My Password
-                </Button>
+                    <SecondaryButton>
+                        <button>
+                            <StyledLink to={ROUTES.SIGN_IN}>Sign In</StyledLink>
+                        </button>
+                    </SecondaryButton>
 
-                {error && <p>{error.message}</p>}
-            </form>
+                    {error && <p>{error.message}</p>}
+                </form>
         );
     }
 }
@@ -82,11 +89,23 @@ const PasswordForgetForm = withFirebase(PasswordForgetFormBase);
 
 export { PasswordForgetForm, PasswordForgetLink };
 
+const PrimaryButton = styled.div`
+    display: flex;
+    justify-content: center;
+`;
+
 const StyledLink = styled(Link)`
     color: white;
     text-decoration: none;
+    font-weight: 500;
 `;
 
 const Button = styled.button`
     color: white;
+`;
+
+const SecondaryButton = styled.div`
+    display: flex;
+    justify-content: center;
+    margin: 90px 0px 0px 0px;    
 `;
