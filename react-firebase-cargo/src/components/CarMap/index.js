@@ -166,6 +166,7 @@ const Wrapper = styled.div`
 
 const StyledLink = styled(Link)`
     text-decoration: none;
+    font-size: 2rem;
     color: white;
 `;
 
