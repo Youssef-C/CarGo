@@ -15,6 +15,7 @@ import MessengerPage from '../Messenger';
 import * as ROUTES from '../../constants/routes';
 import { withAuthenication } from '../Session';
 import CarAddPage from '../CarAdd';
+import ListView from '../CarMap/ListView';
 
 
 const App = () => (
@@ -37,6 +38,7 @@ const App = () => (
               <Route exact path={ROUTES.ADMIN} component={AdminPage} />
               <Route exact path={ROUTES.MESSENGER} component={MessengerPage} />
               <Route exact path={ROUTES.CARADD} component={CarAddPage} />
+              <Route exact path={ROUTES.LISTVIEW} component={ListView} />
 
             </div>
           </Router>

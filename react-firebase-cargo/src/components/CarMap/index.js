@@ -4,10 +4,24 @@ import MapPic from '../Images/mapPicker.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarker} from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
+import * as ROUTES from '../../constants/routes';
 
 
 const CarMap = () => (
     <Wrapper>
+        <MapNav.Wrapper>
+            <MapNav.Items>
+                <MapNav.Button>
+                    <StyledLink to={ROUTES.LISTVIEW}>List</StyledLink>
+                </MapNav.Button>
+                    
+                <MapNav.Button>
+                    <StyledLink to={ROUTES.HOME}>Map</StyledLink>
+                </MapNav.Button>
+            </MapNav.Items>
+        </MapNav.Wrapper>
+
         <Pins.Wrapper>
             <Pins.Items>
                 <Pins.ItemA>
@@ -39,6 +53,9 @@ const CarMap = () => (
                 </Map.Item>
             </Map.Items>
         </Map.Wrapper>
+
+        
+
     </Wrapper>
 );
 
@@ -87,9 +104,9 @@ const Pins = {
 
 const Map = {
     Wrapper: styled.div`
-        background-color: red;
+        padding-top: 8px;
         height: 580px;
-        width: 320px;
+        width: 360px;
         z-index:0;
     `,
 
@@ -106,10 +123,38 @@ const Map = {
         img {
             height: 100%;
             width: 100%;
+            border-radius: 12px;
             }
+    `,
+}
+
+const MapNav = {
+    Wrapper: styled.div`
+        display: flex;
+        justify-content: center;
+    `,
+
+    Items: styled.div`
+        display: flex;
+        height: 40px;
+        z-index: 4;
+    `,
+
+    Button: styled.button`
+        height: 30px;
+        width: 132px;
+    `,
+
+    StyledLink: styled.link`
+        text-decoration: none;
     `,
 }
 
 const Wrapper = styled.div`
 
+`;
+
+const StyledLink = styled(Link)`
+    text-decoration: none;
+    color: white;
 `;

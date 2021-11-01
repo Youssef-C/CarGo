@@ -9,7 +9,6 @@ const HomePage = () => (
     <HomeStyle.Wrapper>
         <HomeStyle.Items>
             <h1>Home</h1>
-            <p>The Home Page is accessible by every signed in user.</p>
             <CarMap />
         </HomeStyle.Items>
     </HomeStyle.Wrapper>
