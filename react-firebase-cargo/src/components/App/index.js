@@ -16,6 +16,7 @@ import * as ROUTES from '../../constants/routes';
 import { withAuthenication } from '../Session';
 import CarAddPage from '../CarAdd';
 import ListView from '../CarMap/ListView';
+import CarView from '../Car View/index';
 
 
 const App = () => (
@@ -39,6 +40,7 @@ const App = () => (
               <Route exact path={ROUTES.MESSENGER} component={MessengerPage} />
               <Route exact path={ROUTES.CARADD} component={CarAddPage} />
               <Route exact path={ROUTES.LISTVIEW} component={ListView} />
+              <Route exact path={ROUTES.CARVIEW} component={CarView} />
 
             </div>
           </Router>

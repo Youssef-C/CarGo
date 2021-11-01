@@ -3,7 +3,7 @@ import styled from "styled-components";
 import MapPic from '../Images/mapPicker.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarker} from '@fortawesome/free-solid-svg-icons';
+import { faMapMarker } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
 
@@ -25,23 +25,33 @@ const CarMap = () => (
         <Pins.Wrapper>
             <Pins.Items>
                 <Pins.ItemA>
-                    <FontAwesomeIcon icon={faMapMarker} size="3x"/>
+                    <PinLink to={ROUTES.CARVIEW} >
+                        <FontAwesomeIcon icon={faMapMarker} size="3x"/>
+                    </PinLink>
                 </Pins.ItemA>
 
                 <Pins.ItemD>
-                    <FontAwesomeIcon icon={faMapMarker} size="3x"/>
+                    <PinLink to={ROUTES.CARVIEW} >
+                        <FontAwesomeIcon icon={faMapMarker} size="3x"/>
+                    </PinLink>
                 </Pins.ItemD>
 
                 <Pins.ItemC>
-                    <FontAwesomeIcon icon={faMapMarker} size="3x"/>
+                    <PinLink to={ROUTES.CARVIEW} >
+                        <FontAwesomeIcon icon={faMapMarker} size="3x" />
+                    </PinLink>
                 </Pins.ItemC>
 
                 <Pins.ItemB>
-                    <FontAwesomeIcon icon={faMapMarker} size="3x"/>
+                    <PinLink to={ROUTES.CARVIEW} >
+                        <FontAwesomeIcon icon={faMapMarker} size="3x"/>
+                    </PinLink>
                 </Pins.ItemB>
 
                 <Pins.ItemA>
-                    <FontAwesomeIcon icon={faMapMarker} size="3x"/>
+                    <PinLink to={ROUTES.CARVIEW} >
+                        <FontAwesomeIcon icon={faMapMarker} size="3x"/>
+                    </PinLink>
                 </Pins.ItemA>
             </Pins.Items>
         </Pins.Wrapper>
@@ -157,4 +167,12 @@ const Wrapper = styled.div`
 const StyledLink = styled(Link)`
     text-decoration: none;
     color: white;
+`;
+
+const PinLink = styled(Link)`
+    text-decoration: none;
+    color: #43456C;
+        :visited {
+            color: #43456C;
+        }
 `;
