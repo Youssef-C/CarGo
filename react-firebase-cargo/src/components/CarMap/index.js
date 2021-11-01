@@ -10,32 +10,32 @@ const CarMap = () => (
     <Wrapper>
         <Pins.Wrapper>
             <Pins.Items>
-                <Pins.Item>
+                <Pins.ItemA>
                     <FontAwesomeIcon icon={faMapMarker} size="3x"/>
-                </Pins.Item>
+                </Pins.ItemA>
 
-                <Pins.Item>
+                <Pins.ItemD>
                     <FontAwesomeIcon icon={faMapMarker} size="3x"/>
-                </Pins.Item>
+                </Pins.ItemD>
 
-                <Pins.Item>
+                <Pins.ItemC>
                     <FontAwesomeIcon icon={faMapMarker} size="3x"/>
-                </Pins.Item>
+                </Pins.ItemC>
 
-                <Pins.Item>
+                <Pins.ItemB>
                     <FontAwesomeIcon icon={faMapMarker} size="3x"/>
-                </Pins.Item>
+                </Pins.ItemB>
 
-                <Pins.Item>
+                <Pins.ItemA>
                     <FontAwesomeIcon icon={faMapMarker} size="3x"/>
-                </Pins.Item>
+                </Pins.ItemA>
             </Pins.Items>
         </Pins.Wrapper>
 
         <Map.Wrapper>
             <Map.Items>
                 <Map.Item>
-
+                    <Map.Image> <img src={MapPic} alt="A map"/></Map.Image>
                 </Map.Item>
             </Map.Items>
         </Map.Wrapper>
@@ -47,26 +47,48 @@ export default CarMap;
 const Pins = {
     Wrapper: styled.div`
         display: flex;
-        height: 600px;
+        height: 580px;
         width: 320px;
         z-index: 2;
         position: absolute;
     `,
 
     Items: styled.div`
+        height: 580px;
+        width: 320px;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        align-self: center;
     `,
 
-    Item: styled.div`
-    
+    ItemB: styled.div`
+        margin-top: 120px;
+        color: #43456C;
+    `,
+
+    ItemA: styled.div`
+        margin-top: 170px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-right: 10px;
+        color: #43456C;
+    `,
+
+    ItemC: styled.div`
+        margin: 30px;
+        color: #43456C;
+    `,
+
+    ItemD: styled.div`
+        margin-top: 380px;
+        color: #43456C;
     `,
 }
 
 const Map = {
     Wrapper: styled.div`
         background-color: red;
-        height: 600px;
+        height: 580px;
         width: 320px;
         z-index:0;
     `,
@@ -78,6 +100,13 @@ const Map = {
 
     Item: styled.div`
     
+    `,
+
+    Image: styled.div`
+        img {
+            height: 100%;
+            width: 100%;
+            }
     `,
 }
 
