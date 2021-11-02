@@ -3,11 +3,12 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
 
     * {
-font-family: 'Comfortaa', cursive;
+        font-family: 'Comfortaa', cursive;
     }
+
     body{
         background: white;
-        padding: 20px;
+        padding: 0px;
     }
 
     button {
