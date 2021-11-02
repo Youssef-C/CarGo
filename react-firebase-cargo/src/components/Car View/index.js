@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 import ProfilePic from '../Images/ProfilePic.jpg';
-import VOLVO from '../Images/VOLVO.webp';
+import VOLVO from '../Images/VOLVO.jpg';
 
 
 const CarView = () => (
@@ -158,16 +158,19 @@ const Cars = {
 const ImageContainer = styled.div`
         display: inline-block;
         width: 375px;
-        height: 350px;
+        height: 300px;
         position: relative;
         overflow: hidden;
         padding: 0px;
         margin: 0px;
+        margin-bottom: 10px;
+        box-shadow: 0px 4px 4px rgba(0,0,0,0.2);
+        
 
         img {
             width: auto;
             height: 100%;
-            margin-left: -80px;
+            margin-left: -50px;
         }
 `;
 
