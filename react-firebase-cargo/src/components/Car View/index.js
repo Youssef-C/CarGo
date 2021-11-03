@@ -23,6 +23,7 @@ const CarView = () => (
                 <h2>Volvo XC60</h2>
             </Wrapper.Item>
 
+            <UserLink to={ROUTES.OTHERUSER}>
             <Wrapper.Info>
                 <Wrapper.Owner>
                     <p>Owner: Per Persson</p>
@@ -37,6 +38,7 @@ const CarView = () => (
                     <FontAwesomeIcon icon={faStar} color="#CCA747"/> 
                 </Cars.Rating>
             </Wrapper.Info>
+            </UserLink>
 
             <Wrapper.Description>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat repellat nam repudiandae eos accusantium officiis deleniti tempora voluptates eius neque ipsam distinctio cum, dolore pariatur perspiciatis aliquam incidunt ab omnis.</p>
@@ -128,7 +130,6 @@ const Wrapper = {
         img {
             width: auto;
             height: 100%;
-            margin-left: -15px;
         }
     `,
 
@@ -179,4 +180,9 @@ const ButtonLink = styled(Link)`
     text-decoration: none;
     font-size: 2rem;
     color: white;
+`;
+
+const UserLink = styled(Link)`
+    text-decoration: none;
+    color: black;
 `;
