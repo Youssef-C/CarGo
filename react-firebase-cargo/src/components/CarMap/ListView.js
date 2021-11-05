@@ -20,7 +20,9 @@ import xc60 from '../Images/xc60.png';
 
 const ListView =  () => (
     <Wrapper>
-        <h1>List View</h1>
+        <MapNav.Title>
+            <h1>List View</h1>
+        </MapNav.Title>
         <MapNav.Wrapper>
             <MapNav.Items>
                 <MapNav.Button>
@@ -164,6 +166,11 @@ const MapNav = {
     Button: styled.button`
         height: 30px;
         width: 132px;
+    `,
+
+    Title: styled.div`
+        display: flex;
+        justify-content: center;
     `,
 }
 
