@@ -14,17 +14,17 @@ const CarBook = () => (
         <BackgroundContainer>
             <Background />
         </BackgroundContainer>
+        
         <ButtonContainer>
             <Container>
-                {/*ADD A ROUTE AND LINK TO BUTTON*/}
-                <StyledButton>
-                    <LockIcon>
-                        <FontAwesomeIcon icon={faLock} color="black"/>
-                    </LockIcon>
-                        LOCK CAR
-                </StyledButton>
-
-                
+                <Link to={ROUTES.REVIEW}>
+                    <StyledButton>
+                        <LockIcon>
+                            <FontAwesomeIcon icon={faLock} color="black"/>
+                        </LockIcon>
+                            LOCK CAR
+                    </StyledButton>
+                </Link>   
             </Container>
         </ButtonContainer>
 

@@ -11,3 +11,4 @@ export const LISTVIEW = '/listview';
 export const CARVIEW = '/carview';
 export const CARBOOK = '/carbook';
 export const OTHERUSER = '/otheruser';
+export const REVIEW = '/review';

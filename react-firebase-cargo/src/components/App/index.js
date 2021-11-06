@@ -19,6 +19,7 @@ import ListView from '../CarMap/ListView';
 import CarView from '../Car View/index';
 import CarBook from '../CarBook/index';
 import OtherUser from '../OtherUser/index';
+import Review from '../Review';
 
 
 const App = () => (
@@ -45,6 +46,7 @@ const App = () => (
               <Route exact path={ROUTES.CARVIEW} component={CarView} />
               <Route exact path={ROUTES.CARBOOK} component={CarBook} />
               <Route exact path={ROUTES.OTHERUSER} component={OtherUser} />
+              <Route exact path={ROUTES.REVIEW} component={Review} />
 
             </div>
           </Router>
