@@ -17,14 +17,14 @@ const CarBook = () => (
         
         <ButtonContainer>
             <Container>
-                <Link to={ROUTES.REVIEW}>
+                <SwipeLink to={ROUTES.REVIEW}>
                     <StyledButton>
                         <LockIcon>
                             <FontAwesomeIcon icon={faLock} color="black"/>
                         </LockIcon>
                             LOCK CAR
                     </StyledButton>
-                </Link>   
+                </SwipeLink>   
             </Container>
         </ButtonContainer>
 
@@ -139,3 +139,9 @@ const InformationContainer = styled.div`
     }
 
 `; 
+
+const SwipeLink = styled(Link)`
+    color: white;
+    text-decoration: none;
+`;
+

@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from 'react-router-dom';
-import * as ROUTES from '../../constants/routes';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
@@ -52,7 +50,7 @@ const OtherUser = () => (
                 <ReviewContainer>
                     <ReviewUser>
                         <ReviewUserImage>
-                            <img src={ProfilePic01} />
+                            <img src={ProfilePic01} alt="user" />
                         </ReviewUserImage>
 
                         <ReviewUserName>
@@ -71,7 +69,7 @@ const OtherUser = () => (
                 <ReviewContainer>
                     <ReviewUser>
                         <ReviewUserImage>
-                            <img src={ProfilePic02} />
+                            <img src={ProfilePic02} alt="user" />
                         </ReviewUserImage>
 
                         <ReviewUserName>
@@ -90,7 +88,7 @@ const OtherUser = () => (
                 <ReviewContainer>
                     <ReviewUser>
                         <ReviewUserImage>
-                            <img src={ProfilePic03} />
+                            <img src={ProfilePic03} alt="user" />
                         </ReviewUserImage>
 
                         <ReviewUserName>
@@ -109,7 +107,7 @@ const OtherUser = () => (
                 <ReviewContainer>
                     <ReviewUser>
                         <ReviewUserImage>
-                            <img src={ProfilePic04} />
+                            <img src={ProfilePic04} alt="user" />
                         </ReviewUserImage>
 
                         <ReviewUserName>
@@ -130,7 +128,7 @@ const OtherUser = () => (
                 <ReviewContainer>
                     <ReviewUser>
                         <ReviewUserImage>
-                            <img src={ProfilePic02} />
+                            <img src={ProfilePic02} alt="user" />
                         </ReviewUserImage>
 
                         <ReviewUserName>

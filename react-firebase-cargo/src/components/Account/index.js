@@ -5,7 +5,6 @@ import ProfilePic from '../Images/ProfilePic.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
-import ProfilePicAlt from '../Images/ProfilePicAlt.jpg';
 import ProfilePic01 from '../Images/ProfilePic01.jpg';
 import ProfilePic02 from '../Images/ProfilePic02.jpg';
 import ProfilePic03 from '../Images/ProfilePic03.jpg';
