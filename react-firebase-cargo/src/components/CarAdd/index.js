@@ -30,7 +30,9 @@ const CarAddPage = () => (
         <InputWrapper>
 
         
-            <p>This will be where one adds a car</p>
+            <p>Vehicle registration plate</p>
+
+            <input placeholder="ABC 123..."/>
 
             <NextButtonWrapper> 
                 <Link to={ROUTES.CONFIRMCARMODEL}>   
@@ -86,6 +88,7 @@ const InputWrapper = styled.div`
 
 const NextButtonWrapper = styled.div`
     display: flex;
+    justify-content: center;
 `;
 
 const NextButton = styled.button`

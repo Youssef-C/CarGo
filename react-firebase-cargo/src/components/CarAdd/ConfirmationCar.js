@@ -29,6 +29,7 @@ const ConfirmationCar = () => (
 
         <InputWrapper>
 
+            
         
             <p>This will be where one adds a car</p>
 
