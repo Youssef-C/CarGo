@@ -6,7 +6,7 @@ import * as ROUTES from '../../constants/routes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDotCircle } from '@fortawesome/free-solid-svg-icons';
 
-const AddPriceCar = () => (
+const ConfirmCarModel = () => (
     <Wrapper>
 
         <ProgressWrapper>
@@ -14,9 +14,9 @@ const AddPriceCar = () => (
 
             <FontAwesomeIcon icon={faDotCircle} color="#43456C"/>
 
-            <FontAwesomeIcon icon={faDotCircle} color="#43456C"/>
+            <FontAwesomeIcon icon={faDotCircle} color="#C4C4C4"/>
 
-            <FontAwesomeIcon icon={faDotCircle} color="#43456C"/>
+            <FontAwesomeIcon icon={faDotCircle} color="#C4C4C4"/>
 
             <FontAwesomeIcon icon={faDotCircle} color="#C4C4C4"/>
 
@@ -24,7 +24,7 @@ const AddPriceCar = () => (
         </ProgressWrapper>
 
         <TitleWrapper>
-            <p>Choose price</p>
+            <p>Is this your car?</p>
         </TitleWrapper>
 
         <InputWrapper>
@@ -33,7 +33,7 @@ const AddPriceCar = () => (
             <p>This will be where one adds a car</p>
 
             <NextButtonWrapper> 
-                <Link to={ROUTES.RENTDATECAR}>   
+                <Link to={ROUTES.ADDCARIMAGES}>   
                     <NextButton> Next </NextButton>
                 </Link> 
             </NextButtonWrapper>
@@ -42,7 +42,7 @@ const AddPriceCar = () => (
     </Wrapper>
 );
 
-export default AddPriceCar;
+export default ConfirmCarModel;
 
 const Wrapper = styled.div`
     display: flex;

@@ -12,3 +12,9 @@ export const CARVIEW = '/carview';
 export const CARBOOK = '/carbook';
 export const OTHERUSER = '/otheruser';
 export const REVIEW = '/review';
+
+export const ADDCARIMAGES = '/addcarimages';
+export const ADDPRICECAR = '/addpricecar';
+export const RENTDATECAR = '/rentdatecar';
+export const CONFIRMATIONCAR = '/confirmationcar';
+export const CONFIRMCARMODEL = '/confirmcarmodel';

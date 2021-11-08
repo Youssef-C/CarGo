@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import * as ROUTES from '../../constants/routes'; 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDotCircle } from '@fortawesome/free-solid-svg-icons';
@@ -32,7 +33,7 @@ const CarAddPage = () => (
             <p>This will be where one adds a car</p>
 
             <NextButtonWrapper> 
-                <Link>   
+                <Link to={ROUTES.CONFIRMCARMODEL}>   
                     <NextButton> Next </NextButton>
                 </Link> 
             </NextButtonWrapper>
