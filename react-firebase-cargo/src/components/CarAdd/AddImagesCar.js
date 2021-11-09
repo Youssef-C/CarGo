@@ -2,9 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';  
+import Upload from './Upload';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDotCircle } from '@fortawesome/free-solid-svg-icons';
+
 
 const AddImagesCar = () => (
     <Wrapper>
@@ -29,8 +31,9 @@ const AddImagesCar = () => (
 
         <InputWrapper>
 
-        
-            <p>This will be where one adds a car</p>
+        <UploadImage.Wrapper>
+            <Upload />
+        </UploadImage.Wrapper>
 
             <NextButtonWrapper> 
                 <Link to={ROUTES.ADDPRICECAR}>   
@@ -81,6 +84,7 @@ const InputWrapper = styled.div`
     margin: 32px;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
 `;
 
@@ -91,3 +95,22 @@ const NextButtonWrapper = styled.div`
 const NextButton = styled.button`
     color: white;
 `;
+
+const UploadImage = {
+    Wrapper: styled.div`
+        display: flex;
+        justify-content: center;
+    `,
+
+    Form: styled.form``,
+
+    Label: styled.label``,
+
+    Input: styled.input`
+
+        display: flex;
+        justify-content: center;
+        height: 120px;
+        width: 120px;
+    `,
+}

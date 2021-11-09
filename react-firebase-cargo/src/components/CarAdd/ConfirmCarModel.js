@@ -6,6 +6,8 @@ import * as ROUTES from '../../constants/routes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDotCircle } from '@fortawesome/free-solid-svg-icons';
 
+import Ford from '../Images/Ford.png';
+
 const ConfirmCarModel = () => (
     <Wrapper>
 
@@ -29,14 +31,26 @@ const ConfirmCarModel = () => (
 
         <InputWrapper>
 
-        
-            <p>This will be where one adds a car</p>
+            <CarWrapper>
+                <p>Ford Mondeo 2015</p>
+                <img src={Ford} alt="ford mondeo 2015" />
+            </CarWrapper>
 
-            <NextButtonWrapper> 
-                <Link to={ROUTES.ADDCARIMAGES}>   
-                    <NextButton> Next </NextButton>
-                </Link> 
-            </NextButtonWrapper>
+            <ButtonWrapper>
+
+                <NextButtonWrapper> 
+                    <Link to={ROUTES.ADDCARIMAGES}>   
+                        <NextButton> Yes </NextButton>
+                    </Link> 
+                </NextButtonWrapper>
+
+                <NextButtonWrapper> 
+                    <Link to={ROUTES.CARADD}>   
+                        <NextButton> No </NextButton>
+                    </Link> 
+                </NextButtonWrapper>
+
+            </ButtonWrapper>
         
         </InputWrapper>
     </Wrapper>
@@ -78,10 +92,36 @@ const TitleWrapper = styled.div`
 `;
 
 const InputWrapper = styled.div`
-    margin: 32px;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-content: center;
+`;
+
+const ButtonWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 60px;
+`;
+
+const CarWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 80%;
+    height: auto;
+    margin: 40px;
+
+    img{
+        width: 240px;
+        height: auto;
+    }
+
+    p{
+        font-size: 22px;
+    }
 `;
 
 const NextButtonWrapper = styled.div`
@@ -90,4 +130,5 @@ const NextButtonWrapper = styled.div`
 
 const NextButton = styled.button`
     color: white;
+    width: 120px;
 `;
