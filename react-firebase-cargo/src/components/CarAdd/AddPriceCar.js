@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes'; 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDotCircle } from '@fortawesome/free-solid-svg-icons';
+import { faDotCircle, faDollarSign } from '@fortawesome/free-solid-svg-icons';
 
 const AddPriceCar = () => (
     <Wrapper>
@@ -29,8 +29,13 @@ const AddPriceCar = () => (
 
         <InputWrapper>
 
-        
-            <p>This will be where one adds a car</p>
+        <InputItem>
+            <p>Set your daily price</p>
+            <IconContainer>
+                <FontAwesomeIcon icon={faDollarSign} size="2x"/>
+            </IconContainer>
+            <input placeholder="45"/>
+        </InputItem>
 
             <NextButtonWrapper> 
                 <Link to={ROUTES.RENTDATECAR}>   
@@ -82,6 +87,20 @@ const InputWrapper = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
+
+    input{
+        padding-left: 30px;
+    }
+`;
+
+const InputItem = styled.div`
+
+`;
+
+const IconContainer = styled.div`
+    position: absolute;
+    padding-left: 22px;
+    padding-top: 18px;
 `;
 
 const NextButtonWrapper = styled.div`
