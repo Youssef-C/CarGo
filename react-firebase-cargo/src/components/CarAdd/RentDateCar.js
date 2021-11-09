@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes'; 
 
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDotCircle } from '@fortawesome/free-solid-svg-icons';
 
@@ -30,7 +33,7 @@ const RentCarDate = () => (
         <InputWrapper>
 
         
-            <p>This will be where one adds a car</p>
+            <Calendar />
 
             <NextButtonWrapper> 
                 <Link to={ROUTES.CONFIRMATIONCAR}>   
