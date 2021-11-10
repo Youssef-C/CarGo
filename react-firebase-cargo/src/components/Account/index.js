@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import ProfilePic from '../Images/ProfilePic.jpg';
+import { Link } from 'react-router-dom';
+import * as ROUTES from '../../constants/routes'; 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
@@ -68,8 +70,13 @@ const AccountPage = () => (
 
                                 <OwnedCars.Info>
                                     <h4>Ford Focus</h4>
-                                    <OwnedCars.Button>Availibilty</OwnedCars.Button>
+                                    <Link to={ROUTES.RENTDATECAR} >
+                                    <OwnedCars.Button>Availibilty </OwnedCars.Button>
+                                    </Link>
+
+                                    <Link to={ROUTES.ADDPRICECAR} >
                                     <OwnedCars.Button>Pricing</OwnedCars.Button>
+                                    </Link>
                                 </OwnedCars.Info>
 
                             </OwnedCars.Item>
